@@ -2,11 +2,12 @@
 using namespace std;
 
 
-int  primeFactorization(long long n)
+int  primeFactorization(long long  n)
 {
+
     map<long long, long long> mp;
 
-    for (int i = 2; i*i <= n; i++)
+    for (long long  i = 2; i*i <= n; i++)
     {
         if (n % i == 0)
         {
@@ -20,16 +21,16 @@ int  primeFactorization(long long n)
 
     for(auto it: mp)
     {
-        
+
         cout<<it.first<< "^"<<it.second<< " ";
     }
 }
 
 int main()
 {
-    long long n;
+    long long  n;
     cin >> n;
-    
+
     primeFactorization(n);
 
     return 0;

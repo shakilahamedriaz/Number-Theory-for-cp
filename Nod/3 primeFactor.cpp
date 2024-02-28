@@ -12,7 +12,7 @@ int primeFactorization(int n)
             while(n%2==0)
             {
                 n/=i;
-                cnt++;
+                power++;
             }
             cout<<i<< "^" <<power<< " ";
         }

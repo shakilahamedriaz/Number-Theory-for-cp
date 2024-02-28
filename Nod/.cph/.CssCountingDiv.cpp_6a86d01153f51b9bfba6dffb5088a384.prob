@@ -1,0 +1,1 @@
+{"name":"Local: CssCountingDiv","url":"e:\\Competative Progtamming\\Number-Theory-for-cp\\Nod\\CssCountingDiv.cpp","tests":[{"id":1709060661806,"input":"3\n16\n17\n18","output":"5\n2\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Competative Progtamming\\Number-Theory-for-cp\\Nod\\CssCountingDiv.cpp","group":"local","local":true}
