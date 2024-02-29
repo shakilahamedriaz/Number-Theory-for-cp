@@ -1,35 +1,38 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
+#define ll long long
 
-int GCD(int a, int b) {
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
+int gcd(int a, int b)
+{
+        if(b == 0 ) return a;
+        else
+            return gcd(b, a%b);
 }
 
-int main() {
-    int N;
+int main()
+{
 
-    while (true) {
-        cin >> N;
+    int n;
+    while(true)
+    {
+        cin >>n;
+        if(n==0) break;
 
-        if (N == 0) {
-            break; // Terminate the program when N is 0
-        }
 
-        int G = 0;
+        long long G = 0;
 
-        for (int i = 1; i < N; i++) {
-            for (int j = i + 1; j <= N; j++) {
-                G += GCD(i, j);
+            for (int i = 1; i < n; i++) {
+            for (int j = i + 1; j <= n; j++) {
+                G += gcd(i, j);
             }
         }
 
         cout << G << endl;
     }
 
+
     return 0;
 }
+
+
+
