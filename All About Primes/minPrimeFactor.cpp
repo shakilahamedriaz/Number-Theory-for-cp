@@ -1,26 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-const int N = 1000000;
-int sieve[N + 1];
+
+int N=1000000;
+int sieve[N+1];
 
 void createsieve()
 {
-    for (int i = 2; i <= N; i++)
+    for(int i=2; i<=N; i++)
     {
-        sieve[i] = 1;
+        sieve[i]=1;
     }
 
-    for (int i = 2; i * i <= N; i++)
+    for(int i=2; i*i<=N; i++)
     {
-        if (sieve[i] == 1)
+        if(sieve[i] == 1)
         {
-            for (int j = i * i; j <= N; j += i)
+            for(int j=i*i; j<=N; j+=i)
             {
-                if (sieve[j] != 0)
+                if(sieve[j] !=0)
                 {
-                    sieve[j]++;
-                    sieve[j] = 0;
+                  sieve[i]++;
+                  sieve[j]=0;
                 }
             }
         }
@@ -29,18 +30,19 @@ void createsieve()
 
 int main()
 {
-    createsieve();
 
-    int q;
-    cin >> q;
+   createsieve();
 
-    while (q--)
-    {
-        int n;
-        cin >> n;
+   int q;
+   cin >>q;
+   while(q--)
+   {
+      int n;
+      cin >>n;
 
-        cout << sieve[n] << endl;
-    }
+      cout<< sieve[n] <<endl;
+   }
+  
 
     return 0;
 }

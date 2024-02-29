@@ -4,11 +4,11 @@ using namespace std;
 
 int sumofDiv(int n)
 {
+
     if(n==1) return 0;
 
     else
     {
-
         ll sum=1;
 
         for(int i=2; i*i<=n; i++)
@@ -23,6 +23,7 @@ int sumofDiv(int n)
                 }
             }
         }
+
         return sum;
     }
 
