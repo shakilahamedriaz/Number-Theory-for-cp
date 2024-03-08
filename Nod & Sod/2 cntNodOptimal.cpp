@@ -1,33 +1,42 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+const int max=100000;
 
- void countDivisor(long long n)
+vector<long long> divisor;
+
+void kthDivisor(long long n)
 {
-    int divisor=0;
-    
     for(long long i=1; i*i<=n; i++)
     {
-       if(i*i == n)
-       {
-          divisor+=1;
-       }
-       else if(n%i == 0)
-       {
-            divisor+=2;
-       }
-    
+        if(n%i==0)
+        {
+            divisor.push_back(i);
+
+            if(n/i !=i)
+            {
+                divisor.push_back(n/i);
+            }
+        }
     }
 
-    cout<< "total divisor's"<<divisor<<endl;
+    sort(divisor.begin(), divisor.end());
 }
 
 int main()
 {
-    long long n; cin >>n;
-    
+    long long n, k;
+    cin >>n >>k;
 
-    countDivisor(n);
+    kthDivisor(n);
 
+    if(divisor.size()< k)
+    {
+        cout<< "-1" <<endl;
+    }
+    else
+    {
+        cout<<divisor[k-1]<<endl;
+    }
     return 0;
 }
