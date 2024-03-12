@@ -28,10 +28,16 @@ int  primeFactorization(long long  n)
 
 int main()
 {
-    long long  n;
-    cin >> n;
 
-    primeFactorization(n);
+    long long t;
+    cin >>t;
+    while(t--)
+    {
 
+      long long  n;
+      cin >> n;
+      primeFactorization(n);
+    
+    }
     return 0;
 }
